@@ -9,7 +9,10 @@ function App () {
   window.changeCounter = changeCounter
   //puts counter onto page
   return(
-    <h1>{counter}</h1>
+    <div>
+      <h1>{counter}</h1>
+      <h3>{counter}</h3>
+    </div>
   )
 }
 
