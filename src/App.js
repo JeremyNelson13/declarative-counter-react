@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+//imports react modules. can also be written as one line
+import React from "react";
+import { useState } from 'react'
+//or import React, { useState } from 'react' will also work
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//defines main App function
+function App () {
+  let [counter, changeCounter] = useState(1)
+  window.changeCounter = changeCounter
+  //puts counter onto page
+  return(
+    <h1>{counter}</h1>
+  )
 }
 
+//exports app.js for use elsewhere
 export default App;
